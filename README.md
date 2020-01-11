@@ -3,7 +3,7 @@ Creates 3D surface maps of pasta based on mathematical pasta functions
 
 Code for mapping surfaces is based on Jasper Flicks Tutorial "Mathematical Surfaces" https://catlikecoding.com/unity/tutorials/basics/mathematical-surfaces/
 
-Feel free to use any of this code, but make sure to credit Jasper for providing this free tutorial.
+Equations used for Pasta is from George L. Legendre's book "Pasta by Design".
 
 #################################
 CAMERA CONTROLLER:
