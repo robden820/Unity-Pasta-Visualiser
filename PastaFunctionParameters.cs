@@ -21,15 +21,20 @@ public class PastaFunctionParameters : MonoBehaviour
                 parameters.y = 120;
                 parameters.z = 5000;
                 break;
+            case PastaFunctionName.ChifferiRigati:
+                parameters.x = 200;
+                parameters.y = 45;
+                parameters.z = 10000;
+                break;
             case PastaFunctionName.Fusilli:
                 parameters.x = 200;
                 parameters.y = 25;
                 parameters.z = 5000;
                 break;
-            case PastaFunctionName.Gigli:
-                parameters.x = 150;
-                parameters.y = 40;
-                parameters.z = 10000;
+            case PastaFunctionName.Riccioli:
+                parameters.x = 50;
+                parameters.y = 200;
+                parameters.z = 15000;
                 break;
             case PastaFunctionName.Spirali:
                 parameters.x = 100;

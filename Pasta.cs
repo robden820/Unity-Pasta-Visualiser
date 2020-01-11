@@ -15,8 +15,9 @@ public class Pasta : MonoBehaviour
         {
             Buccoli,
             Cappelletti,
+            ChifferiRigati,
             Fusilli,
-            Gigli,
+            Riccioli,
             Spirali
         };
 
@@ -84,6 +85,18 @@ public class Pasta : MonoBehaviour
         return p;
     }
 
+    static Vector3 ChifferiRigati(float u, float v)
+    {
+        Vector3 p;
+        float scale = 5f;
+
+        p.x = scale * ((0.45f + 0.3f * Mathf.Cos(pi * u / 100) + 0.05f * Mathf.Cos(pi * 2 * u / 5)) * Mathf.Cos(pi * v / 45) + 0.15f * Mathf.Pow(v / 45, 10) * Mathf.Pow(Mathf.Cos(pi * u / 100), 3));
+        p.y = scale * ((0.4f + 0.3f * Mathf.Cos(pi * u / 100)) * Mathf.Sin(pi * v / 45));
+        p.z = scale * ((0.35f + v / 300) * Mathf.Sin(pi * u / 100) + 0.005f * Mathf.Sin(pi * 2 * u / 5));
+
+        return p;
+    }
+
     static Vector3 Fusilli(float u, float v)
     {
         Vector3 p;
@@ -95,14 +108,14 @@ public class Pasta : MonoBehaviour
         return p;
     }
 
-    static Vector3 Gigli(float u, float v)
+    static Vector3 Riccioli(float u, float v)
     {
         Vector3 p;
-        float scale = 1f;
+        float scale = 0.2f;
 
-        p.x = scale * ((0.8f - 0.6f * Mathf.Pow(Mathf.Sin(pi * v * 80), 0.5f)) * Mathf.Cos(pi * u / 50) + 0.08f * Mathf.Sin(pi * v / 40));
-        p.y = scale * (1.1f * v / 40 + 0.7f * (1 - Mathf.Pow(Mathf.Sin(pi * (150 - u) / 300), 2)));
-        p.z = scale * ((0.8f - 0.6f * Mathf.Pow(Mathf.Sin(pi * v * 80), 0.5f)) * Mathf.Sin(pi * u / 50) + 0.08f * Mathf.Sin(pi * v / 40));
+        p.x = scale * ((2 + 8 * Mathf.Sin(pi * u / 100) + 9 * Mathf.Pow(Mathf.Sin(pi * (11 * v + 100) / 400), 2)) * Mathf.Cos(pi * 4 * u / 125));
+        p.y = scale * (v / 4);
+        p.z = scale * ((2 + 8 * Mathf.Sin(pi * u / 100) + 9 * Mathf.Pow(Mathf.Sin(pi * (11 * v + 100) / 400), 2)) * Mathf.Sin(pi * 4 * u / 125));
 
         return p;
     }

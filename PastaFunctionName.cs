@@ -6,7 +6,8 @@ public enum PastaFunctionName
 {
     Buccoli,
     Cappelletti,
+    ChifferiRigati,
     Fusilli,
-    Gigli,
+    Riccioli,
     Spirali
 }
